@@ -37,7 +37,7 @@ final class BeepManager {
   private static final String TAG = BeepManager.class.getSimpleName();
 
   // Previously set to 0.10f, but that was deafening
-  private static final float BEEP_VOLUME = 0.005f;
+  private static final float BEEP_VOLUME = 0.05f;
   private static final long VIBRATE_DURATION = 200L;
 
   private final Activity activity;
