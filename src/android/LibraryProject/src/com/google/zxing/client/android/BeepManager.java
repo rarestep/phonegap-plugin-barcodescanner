@@ -36,7 +36,8 @@ final class BeepManager {
 
   private static final String TAG = BeepManager.class.getSimpleName();
 
-  private static final float BEEP_VOLUME = 0.10f;
+  // Previously set to 0.10f, but that was deafening
+  private static final float BEEP_VOLUME = 0.005f;
   private static final long VIBRATE_DURATION = 200L;
 
   private final Activity activity;
@@ -93,7 +94,8 @@ final class BeepManager {
     mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
       @Override
       public void onCompletion(MediaPlayer player) {
-        player.seekTo(0);
+        // Removed this line. Previously caused beep to loop while the scanned barcode was being processed by aZX
+        // player.seekTo(0);
       }
     });
 
